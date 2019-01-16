@@ -1,0 +1,5 @@
+# build files
+bin/
+
+# temp/Metadata files
+.DS_Store
