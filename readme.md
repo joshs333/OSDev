@@ -18,11 +18,11 @@ To run this use the following commands.
 chmod +x make_image.sh
 ./make_img.sh
 ```
-This will place the binary outputs of nasm into the bin/ folder.
-This will generate an .img file for qemu
+This will place the binary outputs of nasm into the bin/ folder. All of these will be combined into a single binary image combined_disk.img which will also be in the bin folder.
+This script will also convert this raw binary image into a qcow2 image called floppy_img.qcow2 which can be loaded without error by qemu.
 
 ## Run in Qemu
 ```
-qemu-system-x86_64 -fda drive.img
+qemu-system-x86_64 -fda floppy_img.qcow2
 ```
 There will likely be warnings about reading raw format and stuff like that. For me everything loads and works so I'm ignoring for now.

@@ -1,6 +1,6 @@
 # build files
 bin/
-drive.img
+floppy_img.qcow2
 
 # temp/Metadata files
 .DS_Store
