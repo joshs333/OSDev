@@ -25,4 +25,4 @@ This script will also convert this raw binary image into a qcow2 image called fl
 ```
 qemu-system-x86_64 -fda floppy_img.qcow2
 ```
-There will likely be warnings about reading raw format and stuff like that. For me everything loads and works so I'm ignoring for now.
+The reason we make the raw binary image into a qcow2 image is that while qemu will run the raw image it will give a warning and prevent write access to block 0. While this may or may not be an issue depending on where we are and what exactly we are doing... It's good to clear the error early on and it puts my soul at ease to remove the warning.
